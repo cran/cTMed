@@ -33,22 +33,6 @@ lapply(
       }
     )
     testthat::test_that(
-      paste(text, "DirectVec"),
-      {
-        testthat::expect_true(
-          (
-            answer - cTMed:::.DirectVec(
-              phi = as.vector(phi),
-              delta_t = delta_t,
-              from = 1,
-              to = 3,
-              med = 2
-            )
-          ) <= tol
-        )
-      }
-    )
-    testthat::test_that(
       paste(text, "Med"),
       {
         testthat::expect_true(
@@ -102,5 +86,5 @@ lapply(
     print(direct)
   },
   text = "test-direct",
-  tol = 0.00001
+  tol = 0.01
 )

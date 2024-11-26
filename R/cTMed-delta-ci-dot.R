@@ -25,14 +25,14 @@
             object$args$phi
           )
         } else {
-          if (object$fun == "DeltaMed") {
+          if (object$fun == "DeltaMed" || object$fun == "DeltaMedStd") {
             rownames(ci) <- c(
               "total",
               "direct",
               "indirect"
             )
           }
-          if (object$fun == "DeltaBeta") {
+          if (object$fun == "DeltaBeta" || object$fun == "DeltaBetaStd") {
             varnames <- colnames(
               object$args$phi
             )
@@ -45,18 +45,6 @@
               FUN = function(i) {
                 paste0("from ", x[i, 2], " to ", x[i, 1])
               }
-            )
-          }
-          if (object$fun == "DeltaProp") {
-            rownames(ci) <- c(
-              "Direct/(Direct+Total)",
-              "Indirect/(Indirect+Total)"
-            )
-          }
-          if (object$fun == "DeltaRatio") {
-            rownames(ci) <- c(
-              "Direct/Total",
-              "Indirect/Total"
             )
           }
         }
