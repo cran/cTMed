@@ -1,3 +1,9 @@
+# cTMed 1.0.3
+
+## Patch
+
+* Fixed CRAN issues.
+
 # cTMed 1.0.2
 
 ## Patch
