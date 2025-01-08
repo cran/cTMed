@@ -1,3 +1,9 @@
+# cTMed 1.0.4
+
+## Patch
+
+* Added the `BootMed()` function.
+
 # cTMed 1.0.3
 
 ## Patch

@@ -128,9 +128,11 @@
 #'   \describe{
 #'     \item{delta_t}{Time interval.}
 #'     \item{jacobian}{Jacobian matrix.}
-#'     \item{est}{Estimated elements of the matrix of lagged coefficients.}
+#'     \item{est}{Estimated elements of the standardized matrix
+#'         of lagged coefficients.}
 #'     \item{vcov}{Sampling variance-covariance matrix of
-#'         estimated elements of the matrix of lagged coefficients.}
+#'         estimated elements of the standardized matrix
+#'         of lagged coefficients.}
 #'   }
 #'
 #' @examples
@@ -260,6 +262,10 @@ DeltaBetaStd <- function(phi,
   par <- FALSE
   if (!is.null(ncores)) {
     ncores <- as.integer(ncores)
+    R <- length(delta_t)
+    if (ncores > R) {
+      ncores <- R
+    }
     if (ncores > 1) {
       par <- TRUE
     }
