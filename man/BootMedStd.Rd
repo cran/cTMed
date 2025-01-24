@@ -101,7 +101,7 @@ See \code{\link[=TotalStd]{TotalStd()}},
 }
 \examples{
 \dontrun{
-library(simStateSpace)
+library(bootStateSpace)
 # prepare parameters
 ## number of individuals
 n <- 50
@@ -164,7 +164,7 @@ theta <- 0.2 * diag(k)
 theta_l <- t(chol(theta))
 
 boot <- PBSSMOUFixed(
-  R = 1000L,
+  R = 10L, # use at least 1000 in actual research
   path = getwd(),
   prefix = "ou",
   n = n,
@@ -178,7 +178,7 @@ boot <- PBSSMOUFixed(
   nu = nu,
   lambda = lambda,
   theta_l = theta_l,
-  ncores = parallel::detectCores() - 1,
+  ncores = NULL, # consider using multiple cores
   seed = 42
 )
 phi_hat <- phi
@@ -247,7 +247,9 @@ Psychometrika, 87 (1), 214–252.
 Other Continuous Time Mediation Functions: 
 \code{\link{BootBeta}()},
 \code{\link{BootBetaStd}()},
+\code{\link{BootIndirectCentral}()},
 \code{\link{BootMed}()},
+\code{\link{BootTotalCentral}()},
 \code{\link{DeltaBeta}()},
 \code{\link{DeltaBetaStd}()},
 \code{\link{DeltaIndirectCentral}()},
@@ -267,6 +269,7 @@ Other Continuous Time Mediation Functions:
 \code{\link{MCMed}()},
 \code{\link{MCMedStd}()},
 \code{\link{MCPhi}()},
+\code{\link{MCPhiSigma}()},
 \code{\link{MCTotalCentral}()},
 \code{\link{Med}()},
 \code{\link{MedStd}()},

@@ -1,8 +1,15 @@
+# cTMed 1.0.5
+
+## Patch
+
+* Added the `MCPhiSigma()` function.
+* Added the `BootIndirectCentral()` and `BootTotalCentral()` functions.
+
 # cTMed 1.0.4
 
 ## Patch
 
-* Added the `BootMed()` function.
+* Added the `BootMed()`, `BootMedStd()`, `BootBeta()`, and `BootBetaStd()` functions.
 
 # cTMed 1.0.3
 

@@ -187,8 +187,10 @@ ExpMean(
 Other Continuous Time Mediation Functions: 
 \code{\link{BootBeta}()},
 \code{\link{BootBetaStd}()},
+\code{\link{BootIndirectCentral}()},
 \code{\link{BootMed}()},
 \code{\link{BootMedStd}()},
+\code{\link{BootTotalCentral}()},
 \code{\link{DeltaBeta}()},
 \code{\link{DeltaBetaStd}()},
 \code{\link{DeltaIndirectCentral}()},
@@ -207,6 +209,7 @@ Other Continuous Time Mediation Functions:
 \code{\link{MCMed}()},
 \code{\link{MCMedStd}()},
 \code{\link{MCPhi}()},
+\code{\link{MCPhiSigma}()},
 \code{\link{MCTotalCentral}()},
 \code{\link{Med}()},
 \code{\link{MedStd}()},

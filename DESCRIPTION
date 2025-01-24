@@ -1,6 +1,6 @@
 Package: cTMed
 Title: Continuous Time Mediation
-Version: 1.0.4
+Version: 1.0.5
 Authors@R: 
     person(given = "Ivan Jacob Agaloos",
            family = "Pesigan",
@@ -22,9 +22,9 @@ Imports: Rcpp, numDeriv, parallel, simStateSpace
 Suggests: knitr, rmarkdown, testthat, expm
 RoxygenNote: 7.3.2
 NeedsCompilation: yes
-Packaged: 2025-01-08 09:57:12 UTC; root
+Packaged: 2025-01-23 23:54:58 UTC; root
 Author: Ivan Jacob Agaloos Pesigan [aut, cre, cph]
     (<https://orcid.org/0000-0003-4818-8420>)
 Maintainer: Ivan Jacob Agaloos Pesigan <r.jeksterslab@gmail.com>
 Repository: CRAN
-Date/Publication: 2025-01-08 11:00:16 UTC
+Date/Publication: 2025-01-24 00:40:02 UTC
