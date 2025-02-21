@@ -78,10 +78,9 @@ lapply(
         )
         delta_t <- 2
         total <- expm::expm(delta_t * phi)
-        total_cov <- ExpCov(
+        total_cov <- simStateSpace::LinSDECov(
           phi = phi,
-          sigma = sigma,
-          delta_t = delta_t
+          sigma = sigma
         )
         total_std <- matrix(
           data = 0.0,
@@ -91,8 +90,8 @@ lapply(
         for (j in 1:3) {
           for (i in 1:3) {
             total_std[i, j] <- (
-              sqrt(total_cov[i, i]) * total[i, j]
-            ) * (1 / sqrt(total_cov[j, j]))
+              sqrt(total_cov[j, j]) * total[i, j]
+            ) * (1 / sqrt(total_cov[i, i]))
           }
         }
         answer <- as.vector(
@@ -186,10 +185,9 @@ lapply(
         )
         delta_t <- 2
         total <- expm::expm(delta_t * phi)
-        total_cov <- ExpCov(
+        total_cov <- simStateSpace::LinSDECov(
           phi = phi,
-          sigma = sigma,
-          delta_t = delta_t
+          sigma = sigma
         )
         total_std <- matrix(
           data = 0.0,
@@ -199,8 +197,8 @@ lapply(
         for (j in 1:3) {
           for (i in 1:3) {
             total_std[i, j] <- (
-              sqrt(total_cov[i, i]) * total[i, j]
-            ) * (1 / sqrt(total_cov[j, j]))
+              sqrt(total_cov[j, j]) * total[i, j]
+            ) * (1 / sqrt(total_cov[i, i]))
           }
         }
         answer <- as.vector(

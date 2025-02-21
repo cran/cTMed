@@ -79,7 +79,7 @@ See \code{\link[=Total]{Total()}},
 \code{\link[=Indirect]{Indirect()}} for more details.
 }
 \examples{
-\dontrun{
+\donttest{
 library(bootStateSpace)
 # prepare parameters
 ## number of individuals
@@ -231,8 +231,6 @@ Other Continuous Time Mediation Functions:
 \code{\link{DeltaTotalCentral}()},
 \code{\link{Direct}()},
 \code{\link{DirectStd}()},
-\code{\link{ExpCov}()},
-\code{\link{ExpMean}()},
 \code{\link{Indirect}()},
 \code{\link{IndirectCentral}()},
 \code{\link{IndirectStd}()},

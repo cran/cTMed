@@ -9,9 +9,9 @@ lapply(
       paste(text, "MCMedStd"),
       {
         testthat::skip_on_cran()
-        total <- 0.07477656
-        direct <- -0.30032315
-        indirect <- 0.37509972
+        total <- 0.0854
+        direct <- -0.3429
+        indirect <- 0.4283
         answer <- c(
           total,
           direct,
@@ -108,9 +108,9 @@ lapply(
       paste(text, "plot error"),
       {
         testthat::skip_on_cran()
-        total <- 0.07477656
-        direct <- -0.30032315
-        indirect <- 0.37509972
+        total <- 0.0854
+        direct <- -0.3429
+        indirect <- 0.4283
         answer <- c(
           total,
           direct,
